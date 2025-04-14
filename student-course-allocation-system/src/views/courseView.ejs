@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Allocation</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>Course Allocation System</h1>
+    </header>
+    <main>
+        <h2>Available Courses</h2>
+        <ul>
+            <% courses.forEach(course => { %>
+                <li>
+                    <h3><%= course.name %></h3>
+                    <p><%= course.description %></p>
+                    <button onclick="allocateCourse('<%= course.id %>')">Allocate</button>
+                </li>
+            <% }); %>
+        </ul>
+    </main>
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
